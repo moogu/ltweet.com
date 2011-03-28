@@ -98,12 +98,25 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
         
 ?>
         <div id="welcome-text">
-            Welcome to ltweet.com <br /> Please login with your twitter account, <br /> and then you can start
-            to send biggers tweets <br />(675 characters per tweet). 
+            People don't click in your twitter if you leave a<br /> 
+            tweet like http://bit.ly/edx3Mn to read your message.<br /> <br /> 
+            <span class="intro-text-2">If you want to write more, use ltweet.</span><br /> 
+            <span class="intro-text-3">Just sign in with your twitter account and enjoy<br />
+            Sending 5 tweets in one time.</span> 
         </div>
         
         <div id="login-button" >
+        	<a href="https://twitter.com/signup"><img src="images/sign-up.png" alt="Sign up on Twitter" border="0" /></a>
             <a href="./redirect.php"><img src="./images/lighter.png" alt="Sign in with Twitter" border="0" /></a>
+        </div>
+        
+        <div id="footer">
+        	<ul>
+                <li><a href="how_works.php">How it works</a></li>
+                <li><a href="privacy.php">Privacy</a></li>
+                <li><a href="disclaimer.php">Disclaimer</a></li>
+                <li><a href="contact.php">Contacts</a></li>
+            </ul>
         </div>
         
 <?php
@@ -113,7 +126,10 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
         <div id="menu-container">
             <ul>
                 <li><a class="current" href="index.php">Home</a></li>
-                <li><a href="contact.php">Contact us</a></li>
+                <li><a href="how_works.php">How it works</a></li>
+                <li><a href="privact.php">Privacy</a></li>
+                <li><a href="disclaimer.php">Disclaimer</a></li>
+                <li><a href="contact.php">Contacts</a></li>
                 <li><a class="logout" href='./index.php?logout=1'>Logout</a></li>
             </ul>
         </div>
