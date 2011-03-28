@@ -140,7 +140,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
     			<?php
     				echo '<img src="'.$content->profile_image_url.'" width="30" height="30" /> '.$content->name.'<br /><br />';
     				echo '<span class="profile-label">Description:</span> <p>'.$content->description.'</p><br />';
-    				echo '<span class="profile-label">Last Twitt:</span> <p>'.$content->status->text.'</p><br />';
+    				echo '<span class="profile-label">Last Tweet:</span> <p>'.$content->status->text.'</p><br />';
                     echo '<span class="profile-label">Followers:</span><br /><br />';                    
     
     				$i = 0;
