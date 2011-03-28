@@ -41,20 +41,24 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
     	$tw->split();
     	$tw_text = $tw->tweet();
     	
-    	foreach($tw_text as $data)
-    	{
-    		if($data != '')
+    	for($i = count($tw_text)-1 ; $i >= 0; $i--){
+    		if($tw_text[$i] != '')
     		{
-    			$connection->post('statuses/update', array('status'=>$data));
+    			$connection->post('statuses/update', array('status'=>$tw_text[$i]));
     		}
+    	
     	}
+    	    	
+    	//Redirect again, to display in time line the last tweet
+    	
+    	 header( 'Location: index.php' ) ;
     }
 }
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 	<head>
-		<title>TwittPlus - André Vasconcellos</title>
+		<title>.:: Welcome to ltweet.com ::.</title>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8">
 
 		<link rel="stylesheet" href="css/default.css" type="text/css" />
@@ -65,10 +69,13 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 			rs = false;
 			var text = new String($("#tw_text").val());
 			var len = 675 - text.length;
+			var total_tweets;
+
+			total_tweets = Math.ceil(text.length/140);
 			
 			if(len >= 0)
-			{
-				$("#tw_count").html(len);
+			{				
+				$("#tw_count").html(len + ' [' + total_tweets + '/5]');
 				rs = true;
 			}
 			else
@@ -87,11 +94,12 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 <?php
 
     if(!$is_logged){
+    //Showing login page
         
 ?>
         <div id="welcome-text">
-            Welcome to ltweets.com <br /> Please login with your twitter account, <br /> and then you can start
-            to send biggers tweets <br />(650 characters per tweet). 
+            Welcome to ltweet.com <br /> Please login with your twitter account, <br /> and then you can start
+            to send biggers tweets <br />(675 characters per tweet). 
         </div>
         
         <div id="login-button" >
@@ -100,6 +108,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
         
 <?php
     }else{
+    	//Showing applications page
 ?>
         <div id="menu-container">
             <ul>
@@ -116,7 +125,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
     				echo '<img src="'.$content->profile_image_url.'" width="30" height="30" /> '.$content->name.'<br /><br />';
     				echo '<span class="profile-label">Description:</span> <p>'.$content->description.'</p><br />';
     				echo '<span class="profile-label">Last Twitt:</span> <p>'.$content->status->text.'</p><br />';
-                    echo '<span class="profile-label">Followers:</span><br /><br />';
+                    echo '<span class="profile-label">Followers:</span><br /><br />';                    
     
     				$i = 0;
     				foreach($flws as $flw)
@@ -126,6 +135,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
     						$i++;
     					}
     				}
+    				    				
     			?>
                 
                 <!-- Google Ads -->
@@ -139,7 +149,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
     				What's Happening
     				</div>
     				<div id="tw_count">
-    				675
+    				675 [1/5]
     				</div>
     				<br />
     				<textarea name="tw_text" id="tw_text" cols="100" rows="7" maxlength="675" onkeyup="count_char();"></textarea><br />

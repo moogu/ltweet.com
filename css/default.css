@@ -8,7 +8,7 @@ body {
     width: 100%;
     margin: 20px 0;
     text-align: center;
-    font-size: 30pt;
+    font-size: 20pt;
     font-weight: bold;
     color: #232345;
     text-shadow: 2px 1px 2px #222;
@@ -17,7 +17,7 @@ body {
 #login-button{
     position: absolute;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -100px;
     padding: 10px;
     top: 300px;
     width: 151px;
@@ -82,8 +82,10 @@ a.current{
 	font-weight:bolder;
 	width:50%;
 	float:right;
-	font-size:30px;
+	font-size:28px;
 	text-align:right;
+	text-shadow: 1px 1px 1px #555;
+	margin-bottom: 5px;
 }
 #tw_tag{
 	font-weight:bolder;
@@ -91,7 +93,7 @@ a.current{
 	float:left;
 	font-size:20px;
     color: #aeaeae;
-    text-shadow: 1px 1px 2px #222222;
+    text-shadow: 1px 1px 1px #222222;
 }
 
 #tw_text{
@@ -157,15 +159,15 @@ a.current{
 }
 
 #time-line div{
-    height: 60px;
-    background: #f8f8f8;
+    height: 70px;
+    background: #F4FAFC;
     color: #333;
     padding-top: 5px;
     border-top: solid 1px #898989;
 }
 
 #time-line div:hover{
-    background: #e3e3e3;
+    background: #DBEDF5;
 }
 
 #time-line img{
@@ -186,8 +188,61 @@ hr{
     cursor: pointer;
     color: #999;
     font-size: 12pt;
+	text-shadow: 1px 1px 1px #999;
 }
 
 #tweet-button:hover{
+    background: url(../images/tweet-button.png) no-repeat 0 -40px;
+}
+
+/**** contact.php styles *****/
+
+#contact-text{
+    width: 100%;
+    margin: 20px 0 0 0;
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bold;
+    color: #232345;
+    text-shadow: 1px 1px 1px #222;
+}
+
+.contact-form table{
+   margin: 20px auto 0px auto;
+}
+
+.contact-form .txt{
+   background: url(../images/bg-input-text.jpg) repeat-x;
+   height: 30px;
+   border: solid 1px #a3a3a3;
+   -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+   box-shadow: 1px 1px 2px #222;
+   color: #333;
+   padding: 5px;
+}
+
+.contact-form label{
+   color: #7f3f3f;
+   text-shadow: 1px 1px 2px #999;
+}
+
+.contact-form textarea#message{
+   height: 180px;
+   background: #90C2D9 url(../images/bg-textarea.jpg) repeat-x;
+}
+
+#send-button{
+    background: url(../images/tweet-button.png) no-repeat;
+    border:none;
+	margin-top: 10px;
+    width: 75px;
+    height: 40px;
+    cursor: pointer;
+    color: #888;
+    font-size: 12pt;
+}
+
+#send-button:hover{
     background: url(../images/tweet-button.png) no-repeat 0 -40px;
 }

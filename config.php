@@ -12,11 +12,14 @@
 	define('OAUTH_CALLBACK', 'http://moogu.com/twittplus/callback.php');
     
 	//Database
-	define('SERVERDB', 'testtweetplus.db.5794374.hostedresource.com');
-	define('USERDB', 'testtweetplus');
-	define('PASSDB', 'K4D2oxu9F6J3p');
+	define('SERVERDB', 'localhost');
+	define('USERDB', 'root');
+	define('PASSDB', 'mesa');
 	define('DB', 'testtweetplus');
 	
 	//Set Log or not
-	define('LOGDB', false);
+	define('LOGDB', true);
+	
+	//Set email address for contact form
+	define('CONTACTEMAIL', 'xxxx@xxxx.xxx')
 ?>

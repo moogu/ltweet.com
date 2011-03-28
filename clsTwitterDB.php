@@ -17,6 +17,7 @@ class clsTwitterDB
     private $log = LOGDB;
 	private $text = "";
 	private $author = "";
+	private $contact_email = CONTACTEMAIL;
 
     /* Database connection */
     function __construct()
@@ -45,7 +46,7 @@ class clsTwitterDB
     /* Insert twitter data on Log table */
     function insert_log()
     {
-        $query = "INSERT INTO TB_LOG (NM_USER) VALUES ('".$this->author."')";
+        $query = "INSERT INTO tb_log (NM_USER) VALUES ('".$this->author."')";
 		mysql_query($query, $this->con) or die(mysql_error());
         return false;
     }
@@ -73,6 +74,11 @@ class clsTwitterDB
         }
 		
 		return $this->text;
+    }
+    
+    function get_contact_email()
+    {
+    	return $this->contact_email;
     }
 }
 ?>
