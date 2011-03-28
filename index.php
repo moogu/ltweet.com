@@ -91,7 +91,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 ?>
         <div id="welcome-text">
             Welcome to ltweets.com <br /> Please login with your twitter account, <br /> and then you can start
-            to send biggers tweets <br />(650 characters per tweet). 
+            sending biggers tweets <br />(675 characters per tweet). 
         </div>
         
         <div id="login-button" >
