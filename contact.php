@@ -90,51 +90,25 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 	</head>
 	<body>
     
-        <div id="menu-container">
-            <ul>
-            	<li><img id="logo-menu" src="images/logo-mini.png" /></li>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="how_works.php">How it works</a></li>
-                <li><a href="privacy.php">Privacy</a></li>
-                <li><a href="disclaimer.php">Disclaimer</a></li>
-                <li><a class="current" href="contact.php">Contacts</a></li>
-                <?php if ($is_logged){?>
-                	<li><a class="logout" href='./index.php?logout=1'>Logout</a></li>
-                <?php } ?>
-            </ul>
-        </div>
+        <?php //Showing applications page
+	    	include_once('common_design.php');
+	    	
+	    	$common_design = new commonDesign();
+    	
+    	?>
+    	
+        <!-- Main Menu  -->
+        <?php echo $common_design->topMenu() ?>
         
         <div id="contact-text">
             <?php echo $alert_text ?> 
         </div>
         
         <div id="main-container">
-    		<div id="right">    			
-    			
-    			<?php
-    				if($is_logged){
-	    				echo '<img src="'.$content->profile_image_url.'" width="30" height="30" /> '.$content->name.'<br /><br />';
-	    				echo '<span class="profile-label">Description:</span> <p>'.$content->description.'</p><br />';
-	    				echo '<span class="profile-label">Last Twitt:</span> <p>'.$content->status->text.'</p><br />';
-	                    echo '<span class="profile-label">Followers:</span><br /><br />';                    
-	    
-	    				$i = 0;
-	    				foreach($flws as $flw)
-	    				{
-	    					if($i < 5){
-	    						echo '<img src="'.$flw->profile_image_url.'" width="25" height="25" /> '.$flw->screen_name.'<br />';
-	    						$i++;
-	    					}
-	    				}
-    				}
-	    				    				
-    			?>
-                
-                <!-- Google Ads -->
-                <br />
-                <img src="images/ads.png" />
-                
-    		</div>
+    		
+    		<!-- Right Column -->
+        	<?php echo $common_design->rightColumn($content, $flws) ?>
+    		
     		<div id="left">
 	             <form class="contact-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 			        <table width="420" border="0">

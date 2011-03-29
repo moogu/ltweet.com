@@ -122,45 +122,21 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
         
 <?php
     }else{
-    	//Showing applications page
-?>
-        <div id="menu-container">
-            <ul>
-                <li><img id="logo-menu" src="images/logo-mini.png" /></li>                
-                <li><a class="current" href="index.php">Home</a></li>
-                <li><a href="how_works.php">How it works</a></li>
-                <li><a href="privact.php">Privacy</a></li>
-                <li><a href="disclaimer.php">Disclaimer</a></li>
-                <li><a href="contact.php">Contacts</a></li>
-                <li><a class="logout" href='./index.php?logout=1'>Logout</a></li>
-            </ul>
-        </div>
-        
-        <div id="main-container">
-    		<div id="right">    			
-    			
-    			<?php
-    				echo '<img src="'.$content->profile_image_url.'" width="30" height="30" /> '.$content->name.'<br /><br />';
-    				echo '<span class="profile-label">Description:</span> <p>'.$content->description.'</p><br />';
-    				echo '<span class="profile-label">Last Tweet:</span> <p>'.$content->status->text.'</p><br />';
-                    echo '<span class="profile-label">Followers:</span><br /><br />';                    
     
-    				$i = 0;
-    				foreach($flws as $flw)
-    				{
-    					if($i < 5){
-    						echo '<img src="'.$flw->profile_image_url.'" width="25" height="25" /> '.$flw->screen_name.'<br />';
-    						$i++;
-    					}
-    				}
-    				    				
-    			?>
+    	//Showing applications page
+    	include_once('common_design.php');
+    	
+    	$common_design = new commonDesign();
+    	
+?>
+        <!-- Main Menu  -->
+        <?php echo $common_design->topMenu() ?>
                 
-                <!-- Google Ads -->
-                <br />
-                <img src="images/ads.png" />
-                
-    		</div>
+        <div id="main-container">
+        	
+        	<!-- Right Column -->
+        	<?php echo $common_design->rightColumn($content, $flws) ?>
+    		
     		<div id="left">
     			<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     				<div id="tw_tag">

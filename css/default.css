@@ -306,3 +306,20 @@ hr{
 #send-button:hover{
     background: url(../images/tweet-button.png) no-repeat 0 -40px;
 }
+
+/****  Information pages  *****/
+
+h1.info-title{
+    color: #359687;
+    font-family: Arial, Verdana;
+    font-size: 15tp;
+    text-align: center;
+    text-shadow: 1px 1px 1px #555;
+}
+
+div.info-text {
+   color: #536353;
+   padding: 0 10px;
+   margin-bottom: 10px;
+   text-align: justify;
+}
