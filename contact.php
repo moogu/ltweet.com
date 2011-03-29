@@ -92,6 +92,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
     
         <div id="menu-container">
             <ul>
+            	<li><img id="logo-menu" src="images/logo-mini.png" /></li>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="how_works.php">How it works</a></li>
                 <li><a href="privacy.php">Privacy</a></li>

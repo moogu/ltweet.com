@@ -97,6 +97,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
     //Showing login page
         
 ?>
+		<img id="logo-index" src="images/logo.png" />
         <div id="welcome-text">
             People don't click in your twitter if you leave a<br /> 
             tweet like http://bit.ly/edx3Mn to read your message.<br /> <br /> 
@@ -125,6 +126,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 ?>
         <div id="menu-container">
             <ul>
+                <li><img id="logo-menu" src="images/logo-mini.png" /></li>                
                 <li><a class="current" href="index.php">Home</a></li>
                 <li><a href="how_works.php">How it works</a></li>
                 <li><a href="privact.php">Privacy</a></li>
