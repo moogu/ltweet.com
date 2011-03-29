@@ -160,7 +160,8 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
         			?>
         		</div>
     		</div>
-    		<?php } ?>
+    		<div style="clear:both;height:30px;"></div>    		
         </div>
+        <?php } ?>
 	</body>
 </html>

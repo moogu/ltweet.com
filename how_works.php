@@ -4,47 +4,6 @@ session_start();
 require_once('clsTwitterDB.php');
 require_once('twitteroauth/twitteroauth.php');
 
-$alert_text = 'If you have any question or want to report a bug,<br />feel free to contact us with this form';
-
-$email = '';
-$subject = '';
-$msg = '';
-
-if( $_POST ){
-
-	//Destination email
-	
-	$tw = new clsTwitterDB();
-	
-	$contact_email = $tw->get_contact_email(); 
-	 
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-	$subject = $_POST['subject'];
-	$msg = $_POST['message'];
-	
-	if ($name == '' || $email == '' || $subject == '' || $msg == ''){
-		$alert_text = 'Oh no! you forgot to fill all fields, please complete them all and try again';	
-	}else{
-	
-		$message = "
-		      
-			Name:  ".$nombre."	
-		
-		    ".$msg."";
-		  
-		  	if (mail($contact_email, $subject, $msg, "FROM: $email\n")){
-				$alert_text = "Thanks for sending us your comments, we're going to answer you soon! ";
-				$email = '';
-				$subject = '';
-				$msg = '';
-			}else{
-				$alert_text = "Oh no! There was an error, please try sending your comments again ";
-			}
-	}
-
-}
-
 /* Verifying token */
 if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_token']) || empty($_SESSION['access_token']['oauth_token_secret'])) {
 	
@@ -100,10 +59,6 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
         <!-- Main Menu  -->
         <?php echo $common_design->topMenu() ?>
         
-        <div id="contact-text">
-            <?php echo $alert_text ?> 
-        </div>
-        
         <div id="main-container">
     		
     		<!-- Right Column -->
@@ -119,6 +74,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 					<br/><br/>Sed id augue dui. Praesent sollicitudin felis dignissim arcu fermentum euismod. Nunc consectetur venenatis risus, dictum pretium est feugiat non. Nulla turpis purus, scelerisque at iaculis sed, dapibus at justo. Ut id sapien vel turpis feugiat posuere. Nullam eu massa vel nunc gravida faucibus. Pellentesque eu lacus nec leo mollis cursus. Nulla a risus ligula, quis suscipit arcu. In metus lacus, vulputate quis bibendum sit amet, molestie eu purus. Sed id metus vel neque convallis lacinia. In faucibus, felis ut pulvinar consequat, nibh est tristique quam, in fringilla tortor nunc fermentum metus. Aliquam at tellus massa, vitae tempor nisl. Fusce in tempus nulla. Sed dignissim arcu nec lectus porta sodales.
 	            </div>   
         	</div>
+        	<div style="clear:both;height:30px;"></div>
         </div>
 	</body>
 </html>

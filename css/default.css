@@ -1,7 +1,7 @@
 body {
     background: #C0DEED url(../images/background.png) repeat-x;
     padding:0;
-    margin:0;
+	margin:0;
 }
 
 #logo-index{
@@ -53,8 +53,9 @@ body {
 #main-container{
     width: 900px;
     height: 100%;
-    margin: 20px auto;
+    margin: 20px auto 50px auto;
     padding: 40px;
+    
 }
 
 #menu-container{
@@ -144,7 +145,7 @@ a.current{
 	display:box;
 	background-color:#FFF;
 	padding:10px;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-box-shadow: 2px 2px 3px #222222;
@@ -238,7 +239,7 @@ hr{
 
 #footer ul{
 	list-style: none;
-	width: 500px;
+	width: 450px;
 	margin: 0 auto;
 }
 
@@ -250,9 +251,9 @@ hr{
     padding: 5px 10px;
     color: #141414;
     text-decoration: none;
-    text-shadow: 1px 1px 1px #111;
     border-left: solid 1px #A6D5ED;
-     border-right: solid 1px #86858D;
+    border-right: solid 1px #86858D;
+	font-size: 10pt;
 }
 
 /**** contact.php styles *****/
@@ -285,6 +286,11 @@ hr{
 .contact-form label{
    color: #7f3f3f;
    text-shadow: 1px 1px 2px #999;
+   font-size: 20pt;
+}
+
+.contact-form label.comment-label{
+	font-size: 12pt;
 }
 
 .contact-form textarea#message{

@@ -143,7 +143,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 			            <tr>
 			                <td colspan="3" align="center">
 			                    <br/>
-			                    <label for="message">Comments</label>
+			                    <label for="message" class="comment-label">Comments</label>
 			                </td>
 			            </tr>
 			            <tr>
@@ -163,6 +163,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 			
 			    </form>   
         	</div>
+        	<div style="clear:both;height:30px;"></div>
         </div>
 	</body>
 </html>
