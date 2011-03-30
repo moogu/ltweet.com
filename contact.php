@@ -118,7 +118,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 			                    <label for="name"> Name:</label>			                    
 			                </td>
 			                <td width="auto">
-			                    <input name="name" id="name" type="text" size="20" class="txt" value="<?php echo $content->name ?>"/>
+			                    <input name="name" id="name" type="text" size="37" class="txt" value="<?php echo $content->name ?>"/>
 			                </td>
 			            </tr>
 			
@@ -127,7 +127,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 			                    <label for="email"> Email:</label>
 			                </td>
 			                <td>
-			                    <input name="email" id="email" type="text" size ="20" class="txt"/>
+			                    <input name="email" id="email" type="text" size ="37" class="txt"/>
 			                </td>
 			            </tr>
 			
@@ -136,7 +136,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 			                    <label for="subject"> Subject:</label>
 			                </td>
 			                <td>
-			                    <input name="subject" id="subject" type="text" size="20" class="txt"/>
+			                    <input name="subject" id="subject" type="text" size="37" class="txt"/>
 			                </td>
 			            </tr>
 			
