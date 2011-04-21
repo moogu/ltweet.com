@@ -66,13 +66,15 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
         	<?php echo $common_design->rightColumn($content, $flws) ?>
     		
     		<div id="left">
-	            <h1 class="info-title">Privacy</h1>
+	            <h1 class="info-title">Privacy Policy</h1>
 	            <div class="info-text">
-	            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a nunc turpis. Nulla id sodales orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-	            	<br/><br/>Maecenas enim mauris, semper sit amet pharetra sed, fermentum in tortor. Proin in tellus sit amet tellus interdum vestibulum sed in turpis. Quisque quam diam, volutpat in tincidunt consequat, dignissim at quam. Nulla ac magna nibh. 
-	            	<br/><br/>Sed tellus risus, varius ac imperdiet vitae, tristique eget quam. Phasellus euismod, nulla sed dignissim molestie, metus ligula pharetra orci, non tincidunt est lorem volutpat lacus. Sed gravida dictum tellus, at convallis massa eleifend eget. Duis bibendum quam mattis felis tincidunt id dignissim sem tempus. 
-	            	<br/><br/>In laoreet felis porta nisi interdum commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin ut elit in mi semper ullamcorper. Phasellus justo urna, laoreet a sodales ut, suscipit nec magna. Pellentesque condimentum sodales nulla ac vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc interdum commodo mi vitae tincidunt.
-					<br/><br/>Sed id augue dui. Praesent sollicitudin felis dignissim arcu fermentum euismod. Nunc consectetur venenatis risus, dictum pretium est feugiat non. Nulla turpis purus, scelerisque at iaculis sed, dapibus at justo. Ut id sapien vel turpis feugiat posuere. Nullam eu massa vel nunc gravida faucibus. Pellentesque eu lacus nec leo mollis cursus. Nulla a risus ligula, quis suscipit arcu. In metus lacus, vulputate quis bibendum sit amet, molestie eu purus. Sed id metus vel neque convallis lacinia. In faucibus, felis ut pulvinar consequat, nibh est tristique quam, in fringilla tortor nunc fermentum metus. Aliquam at tellus massa, vitae tempor nisl. Fusce in tempus nulla. Sed dignissim arcu nec lectus porta sodales.
+<b>We respect your privacy</b>
+Any personal information you provide to us including and similar to your name, username and e-mail address will
+not be released, sold, or rented to any entities or individuals outside of our organization.<br/><br/>
+<b>External Sites.</b>
+We are not responsible for the content of external internet sites. You are advised to read the privacy policy of external sites before disclosing any personal information.
+<b>Cookies</b>
+A "cookie" is a small data text file that is placed in your browser and allows us to recognize you each time you visit this site (personalization, etc). Cookies themselves do not contain any personal information, and we do not use cookies to collect personal information. Cookies may also be used by 3rd party content providers such as newsfeeds.
 	            </div>
         	</div>
         	<div style="clear:both;height:30px;"></div>

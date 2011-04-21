@@ -5,11 +5,11 @@
 	 */
 	
 	//API keys
-	define('CONSUMER_KEY', 'LkslRyHeA2KtYh13kpGhg');
-	define('CONSUMER_SECRET', 'MXGS0flkiOd257UyI9xEzBXx9gSVoTwYzsoO4VTeV8');
+	define('CONSUMER_KEY', 'Fruthv4sHhgqbwAfpQWLew');
+	define('CONSUMER_SECRET', 'BD2tfrbrzEtIuvdSnkvG8zpFStKQZHFq0NCyrhyD3kE');
     
 	//Callback URL to API twitter too
-	define('OAUTH_CALLBACK', 'http://moogu.com/twittplus/callback.php');
+	define('OAUTH_CALLBACK', 'http://ltweet.com/callback.php');
     
 	//Database
 	define('SERVERDB', 'localhost');
@@ -21,5 +21,5 @@
 	define('LOGDB', true);
 	
 	//Set email address for contact form
-	define('CONTACTEMAIL', 'xxxx@xxxx.xxx')
+	define('CONTACTEMAIL', 'info@moogu.com')
 ?>
