@@ -87,6 +87,19 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 			return rs;
 		}
 		</script>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-21972831-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+
+</script>
 	</head>
 	<body>
     
@@ -100,7 +113,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 		<img id="logo-index" src="images/logo.png" />
         <div id="welcome-text">
             People don't click in your twitter if you leave a<br /> 
-            tweet like http://bit.ly/edx3Mn to read your message.<br /> <br /> 
+            tweet like http://bit.ly/i1DlPm to read your message.<br /> <br /> 
             <span class="intro-text-2">If you want to write more, use ltweet.</span><br /> 
             <span class="intro-text-3">Just sign in with your twitter account and enjoy<br />
             Sending 5 tweets in one time.</span> 

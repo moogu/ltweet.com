@@ -12,13 +12,13 @@
 	define('OAUTH_CALLBACK', 'http://ltweet.com/callback.php');
     
 	//Database
-	define('SERVERDB', 'localhost');
-	define('USERDB', 'root');
-	define('PASSDB', 'mesa');
-	define('DB', 'testtweetplus');
+	define('SERVERDB', 'ltweet.db.7774928.hostedresource.com');
+	define('USERDB', 'ltweet');
+	define('PASSDB', 'k76D6axy2i3D');
+	define('DB', 'ltweet');
 	
 	//Set Log or not
-	define('LOGDB', true);
+	define('LOGDB', false);
 	
 	//Set email address for contact form
 	define('CONTACTEMAIL', 'info@moogu.com')
