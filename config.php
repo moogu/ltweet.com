@@ -18,7 +18,7 @@
 	define('DB', 'ltweet');
 	
 	//Set Log or not
-	define('LOGDB', false);
+	define('LOGDB', true);
 	
 	//Set email address for contact form
 	define('CONTACTEMAIL', 'info@moogu.com')

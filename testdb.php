@@ -4,18 +4,17 @@
     $username='ltweet';
     $password='k76D6axy2i3D';
     $dbname='ltweet';
-    $usertable='tb_log';
-    $yourfield = 'nm_user';
+    $yourfield = 'NM_USER';
     
-    mysql_connect($hostname,$username, $password) OR DIE ('Unable to connect to database! Please try again later.');
+    mysql_connect($hostname,$username, $password) OR DIE (mysql_error());
     mysql_select_db($dbname);
     
-    $query = 'SELECT * FROM ' . $usertable;
+    $query = 'SELECT * FROM `tb_log`';
     $result = mysql_query($query);
     if($result) {
         while($row = mysql_fetch_array($result)){
             $name = $row[$yourfield];
-            echo 'Name: ' . $name;
+            echo 'Name: ' . $name . '<br/>';
         }
     }
     ?>
