@@ -148,7 +148,7 @@ _gaq.push(['_trackPageview']);
         <div id="main-container">
         	
         	<!-- Right Column -->
-        	<?php echo $common_design->rightColumn($content, $flws) ?>
+        	<?php echo $common_design->rightColumn($content, $flws, true) ?>
     		
     		<div id="left">
     			<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">

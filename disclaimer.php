@@ -38,14 +38,7 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 
 		<link rel="stylesheet" href="css/default.css" type="text/css" />
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript">
-			$(function(){				
-				$('#email').val('<?php echo $email ?>');
-				$('#subject').val('<?php echo $subject ?>');
-				$('#message').val('<?php echo $msg ?>');
-			});
-			
-		</script>
+		
 <script type="text/javascript">
 
 var _gaq = _gaq || [];

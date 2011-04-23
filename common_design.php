@@ -25,14 +25,11 @@
 		<?php 
 		}
 		
-		public function rightColumn($content, $flws){
+		public function rightColumn($content, $flws, $show_twitter=false){
 		
-			if(@!empty($_SESSION['access_token'])){
-		?>
-			<div id="right">    			
+			echo '<div id="right">';
     			
-    			<?php
-    				
+					if(@!empty($_SESSION['access_token']) && $show_twitter){	
 	    				echo '<img src="'.$content->profile_image_url.'" width="30" height="30" /> '.$content->name.'<br /><br />';
 	    				echo '<span class="profile-label">Description:</span> <p>'.$content->description.'</p><br />';
 	    				echo '<span class="profile-label">Last Tweet:</span> <p>'.$content->status->text.'</p><br />';
@@ -49,17 +46,21 @@
 		    					}
 		    				}
 	    				}
-    					    				
+    				}	    				
     			?>
                 
                 <!-- Google Ads -->
                 
                 <br />
-                
+                <span class="profile-label">This are google ads</span>
+				<ul>
+					<li>Some information</li>
+					<li>Some information</li>
+				</ul>
                 
     		</div>
 		<?php 
-			}
+			
 		}
 	
 	
