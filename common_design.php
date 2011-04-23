@@ -25,41 +25,35 @@
 		<?php 
 		}
 		
-		public function rightColumn($content, $flws, $show_twitter=false){
-		
-			echo '<div id="right">';
+		public function rightColumn($content, $flws, $show_twitter=false){			
     			
-					if(@!empty($_SESSION['access_token']) && $show_twitter){	
-	    				echo '<img src="'.$content->profile_image_url.'" width="30" height="30" /> '.$content->name.'<br /><br />';
-	    				echo '<span class="profile-label">Description:</span> <p>'.$content->description.'</p><br />';
-	    				echo '<span class="profile-label">Last Tweet:</span> <p>'.$content->status->text.'</p><br />';
-	                    
-	    				if(@$flws){
-		    				echo '<span class="profile-label">Followers:</span><br /><br />';                    
-		    
-		    				$i = 0;
-		    				foreach($flws as $flw)
-		    				{
-		    					if($i < 5){
-		    						echo '<img src="'.$flw->profile_image_url.'" width="25" height="25" /> '.$flw->screen_name.'<br />';
-		    						$i++;
-		    					}
-		    				}
-	    				}
-    				}	    				
-    			?>
-                
-                <!-- Google Ads -->
-                
-                <br />
-                <span class="profile-label">This are google ads</span>
-				<ul>
-					<li>Some information</li>
-					<li>Some information</li>
-				</ul>
-                
-    		</div>
-		<?php 
+			if(@!empty($_SESSION['access_token']) && $show_twitter){	
+				echo '<div id="right">';
+				echo '<img src="'.$content->profile_image_url.'" width="30" height="30" /> '.$content->name.'<br /><br />';
+				echo '<span class="profile-label">Description:</span> <p>'.$content->description.'</p><br />';
+				echo '<span class="profile-label">Last Tweet:</span> <p>'.$content->status->text.'</p><br />';
+				
+				if(@$flws){
+					echo '<span class="profile-label">Followers:</span><br /><br />';                    
+	
+					$i = 0;
+					foreach($flws as $flw)
+					{
+						if($i < 5){
+							echo '<img src="'.$flw->profile_image_url.'" width="25" height="25" /> '.$flw->screen_name.'<br />';
+							$i++;
+						}
+					}
+				}
+				//<!-- Google Ads -->				
+				echo '<br />';
+				echo '</div>';
+			}else{
+				echo '<style type="text/css">';
+				echo '	#left{margin-left: 170px}';
+				echo '	#menu-container ul{width: 600px}';
+				echo '</style>';
+			}	
 			
 		}
 	

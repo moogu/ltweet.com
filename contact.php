@@ -1,19 +1,15 @@
 <?php
-session_start();
-
-require_once('clsTwitterDB.php');
-require_once('twitteroauth/twitteroauth.php');
 
 $alert_text = 'If you have any question or want to report a bug,<br />feel free to contact us with this form';
 
+$name = '';
 $email = '';
 $subject = '';
 $msg = '';
 
 if( $_POST ){
 
-	//Destination email
-	
+	require_once('clsTwitterDB.php');
 	$tw = new clsTwitterDB();
 	
 	$contact_email = $tw->get_contact_email(); 
@@ -33,7 +29,7 @@ if( $_POST ){
 		
 		    ".$msg."";
 		  
-		  	if (mail($contact_email, $subject, $msg, "FROM: $email\n")){
+		  	if (@mail($contact_email, $subject, $msg, "FROM: $email\n")){
 				$alert_text = "Thanks for sending us your comments, we're going to answer you soon! ";
 				$email = '';
 				$subject = '';
@@ -45,31 +41,7 @@ if( $_POST ){
 
 }
 
-/* Verifying token */
-if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_token']) || empty($_SESSION['access_token']['oauth_token_secret'])) {
-	
-	$is_logged = false;
-	
-}else{
-	
-	$is_logged = true;
-	
-    /* Get session token. */
-    $access_token = $_SESSION['access_token'];
-    
-    /* Creating OAuth object. */
-    $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
-    
-    /* User credentials by twitter API */
-    $content = $connection->get('account/verify_credentials');
-    
-    /* Get followers. */
-    $flws = $connection->get('statuses/followers');
-    
-    //return current user timeline
-    $timeline = $connection->get('statuses/home_timeline', array('screen_name' => $content->screen_name));
-    
-}
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
@@ -81,25 +53,13 @@ if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_t
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript">
 			$(function(){				
+				$('#name').val('<?php echo $name ?>');
 				$('#email').val('<?php echo $email ?>');
 				$('#subject').val('<?php echo $subject ?>');
 				$('#message').val('<?php echo $msg ?>');
 			});
 			
 		</script>
-<script type="text/javascript">
-
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-21972831-3']);
-_gaq.push(['_trackPageview']);
-
-(function() {
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
- ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
- })();
-
-</script>
 	</head>
 	<body>
     
@@ -118,10 +78,10 @@ _gaq.push(['_trackPageview']);
         </div>
         
         <div id="main-container">
-    		
-    		<!-- Right Column -->
-        	<?php echo $common_design->rightColumn($content, $flws) ?>
-    		
+
+			<!-- Right Column -->
+        	<?php echo $common_design->rightColumn(false, false) ?>
+			
     		<div id="left">
 	             <form class="contact-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 			        <table width="420" border="0">
@@ -131,7 +91,7 @@ _gaq.push(['_trackPageview']);
 			                    <label for="name"> Name:</label>			                    
 			                </td>
 			                <td width="auto">
-			                    <input name="name" id="name" type="text" size="37" class="txt" value="<?php echo $content->name ?>"/>
+			                    <input name="name" id="name" type="text" size="37" class="txt" />
 			                </td>
 			            </tr>
 			
@@ -162,8 +122,7 @@ _gaq.push(['_trackPageview']);
 			            <tr>
 			                <td colspan="3" align="center">
 			                    <textarea name="message" id="message" rows="10" cols ="50" class="txt">
-			                    </textarea>
-			
+			                    </textarea>			
 			                </td>
 			            </tr>
 			            <tr>
