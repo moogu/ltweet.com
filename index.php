@@ -112,11 +112,17 @@ _gaq.push(['_trackPageview']);
 ?>
 		<img id="logo-index" src="images/logo.png" />
         <div id="welcome-text">
-            People don't click in your twitter if you leave a<br /> 
-            tweet like http://bit.ly/i1DlPm to read your message.<br /> <br /> 
-            <span class="intro-text-2">If you want to write more, use ltweet.</span><br /> 
-            <span class="intro-text-3">Just sign in with your twitter account and enjoy<br />
-            Sending 5 tweets in one time.</span> 
+            It is a fact, people do not click through to read your long posts
+            when you include shortened URL&#39;s in your tweets using sites like
+            bit.ly or tinyurl.<br /><br />
+            <span class="intro-text-2">
+                Want to write longer tweets, that people actually read? Use
+                ltweet.
+            </span><br /> 
+            <span class="intro-text-3">
+                Simply log in with your twitter account and start tweeting longer
+            messages using up to 5 tweets at once.
+            </span> 
         </div>
         
         <div id="login-button" >

@@ -40,13 +40,28 @@ _gaq.push(['_trackPageview']);
     		<div id="left">
 	            <h1 class="info-title">Privacy Policy</h1>
 	            <div class="info-text">
-<b>We respect your privacy</b><br/>
-Any personal information you provide to us including and similar to your name, username and e-mail address will
-not be released, sold, or rented to any entities or individuals outside of our organization.<br/><br/>
-<b>External Sites.</b><br/>
-We are not responsible for the content of external internet sites. You are advised to read the privacy policy of external sites before disclosing any personal information.<br/><br/>
-<b>Cookies</b><br/>
-A "cookie" is a small data text file that is placed in your browser and allows us to recognize you each time you visit this site (personalization, etc). Cookies themselves do not contain any personal information, and we do not use cookies to collect personal information. Cookies may also be used by 3rd party content providers such as newsfeeds.
+                    <strong>Your privacy is our primary concern.</strong>
+                    <br /><br />
+                    Under absolutely no circumstances will any of the personal
+                    information you provide to us, including your name, username, or
+                    email address, be sold, rented, or otherwise handed out to any
+                    third-party group or individual outside of our organization.
+                    <br /><br />
+                    We cannot be responsible for the content or site policies of
+                    twitter.com or any other Internet site external to this one. You are
+                    advised to thoroughly read the privacy policy and terms of use for
+                    all external sites before disclosing any of your personal
+                    information.
+                    <br /><br />
+                    This site uses cookies. A &quot;cookie&quot; is a string of text that is
+                    associated with your computer for a session and saved by your
+                    browser. It allows us to recognize you and serve up personalised
+                    content each time you visit. This includes things like allowing you
+                    to use the site over a number of visits without having to log-in
+                    each time. Cookies themselves do not contain any personal
+                    information about you at all. They are simply a way for our site to
+                    recognize your computer. Cookies may also be used by 3rd party
+                    content providers such as news feeds.
 	            </div>
         	</div>
         	<div style="clear:both;height:30px;"></div>

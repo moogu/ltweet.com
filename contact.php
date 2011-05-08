@@ -1,6 +1,6 @@
 <?php
 
-$alert_text = 'If you have any question or want to report a bug,<br />feel free to contact us with this form';
+$alert_text = '';
 
 $name = '';
 $email = '';
@@ -83,6 +83,17 @@ if( $_POST ){
         	<?php echo $common_design->rightColumn(false, false) ?>
 			
     		<div id="left">
+                <h1 class="info-title">Contact Us</h1>
+                <div class="info-text">
+                    We welcome your feedback! If you have a suggestion for how we
+                    may improve the service, feel free to use the contact form below
+                    to get in touch with us. We also encourage you to report any bugs
+                    or glitches that you may experience when using our site. We do
+                    not need to hear from you if you get the infamous twitter &quot;Fail
+                    Whale&quot; when trying to use our service as that is an issue with their
+                    servers not ours, but we won&#39;t get angry if you write us about it
+                    anyway!
+                </div>
 	             <form class="contact-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 			        <table width="420" border="0">
 			

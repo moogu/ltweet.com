@@ -40,7 +40,25 @@ _gaq.push(['_trackPageview']);
     		<div id="left">
     			<h1 class="info-title">How it works</h1>
 	             <div class="info-text">
-	            	Write one long tweet and it will split in max 5 normal tweets. Enjoy!
+	            	What do people often do when they want put up longer text on
+                    twitter? They go write a long post, put it online somewhere and
+                    use a URL shortening service, so they can write at least a few
+                    words alongside the link as an intro in their tweet.<br /><br />
+                    
+                    The problem? People are sick of having to navigate away from
+                    twitter throughout the day just to read people&#39;s &quot;tweets&quot;. They
+                    rarely click though anymore.<br /><br />
+                    
+                    The solution? Simply spread out your post over a few tweets.
+                    Ltweet is a service that allows you to put in up to 5 messages
+                    worth of text, or 700 characters, and it will automatically break
+                    them up and post them to twitter for you.<br /><br />
+                     
+                    You don&quot;t have to sit
+                    and try to keep your train of thought as you press the &quot;tweet&quot;
+                    button and wait for it to load so you can continue writing. Just do
+                    what you do best, write what&#39;s on your mind, and leave the rest to
+                    us!
 	            </div>   
         	</div>
         	<div style="clear:both;height:30px;"></div>

@@ -40,8 +40,12 @@ _gaq.push(['_trackPageview']);
     		<div id="left">
     			<h1 class="info-title">Disclaimer</h1>
 	             <div class="info-text">
-	            	ltweet is an application that uses Twitter API. It is free of charge. <br/>
-                    We don't keep the tweets from the user.</br>
+	            	Ltweet is an application that makes use of the Twitter API. This
+                    service is provided for your use completely free of charge. 
+                    <br /><br />
+                    No tweets are ever stored on our servers. We are a gateway for you
+                    to use your Twitter account with the enhancement Ltweet
+                    provides.
 	            </div>   
         	</div>
         	<div style="clear:both;height:30px;"></div>
