@@ -47,7 +47,18 @@
 				}
 				//<!-- Google Ads -->
                 echo '<br />';                
-                echo '<script type="text/javascript"><!-- google_ad_client = "pub-6070355393344861"; /* 336x280, created 5/9/11 */ google_ad_slot = "4452831746"; google_ad_width = 336; google_ad_height = 280; //--> </script> <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> </script>';		
+                echo '<script type="text/javascript">
+                            <!--
+                            google_ad_client = "ca-pub-6070355393344861";
+                            /* 336x280, created 5/9/11 */
+                            google_ad_slot = "4452831746";
+                            google_ad_width = 336;
+                            google_ad_height = 280;
+                            //-->
+                        </script>
+                            <script type="text/javascript"
+                            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                        </script>';		
 				echo '<br />';
 				echo '</div>';
 			}else{
