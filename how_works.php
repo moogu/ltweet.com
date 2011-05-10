@@ -54,7 +54,7 @@ _gaq.push(['_trackPageview']);
                     worth of text, or 700 characters, and it will automatically break
                     them up and post them to twitter for you.<br /><br />
                      
-                    You don&quot;t have to sit
+                    You don&#39;t have to sit
                     and try to keep your train of thought as you press the &quot;tweet&quot;
                     button and wait for it to load so you can continue writing. Just do
                     what you do best, write what&#39;s on your mind, and leave the rest to
