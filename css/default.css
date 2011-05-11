@@ -51,10 +51,10 @@ body {
 }
 
 #main-container{
-    width: 900px;
+    width: 970px;
     height: 100%;
     margin: 20px auto 50px auto;
-    padding: 40px;
+    padding: 40px 0;
     
 }
 
@@ -156,7 +156,7 @@ a.current{
 	color:#000000;
 	float:right;
 	height:auto;
-	width:300px;
+	width:370px;
 	/*border:thin solid #CFC;*/
 	display:box;
     background-color:#DBEDF5;
